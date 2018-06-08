@@ -16,10 +16,16 @@
 
 .image {
 	height: 20rem;
-	width: 20rem;
+	width: 15rem;
+	border: .5rem solid white;
+	margin: 1rem;
 }
 
 .bottom-box {
 	background-color: gray;
 	margin-bottom: 10px;
+}
+
+.select-class {
+	font-size: 1.25rem;
 }

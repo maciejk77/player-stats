@@ -1,16 +1,14 @@
 import React, { Component }  from 'react';
 import '../css/styles.css';
 import no_player from '../assets/no_player.png';
+import spurs from '../assets/p4916.png';
+
 import player_data from '../data/player_stats.json';
 
 class Player extends Component {
 
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			value: '--- Select player ---'
-		}
 
 		this.handle_change = this.handle_change.bind(this)
 	}
@@ -23,11 +21,13 @@ class Player extends Component {
 	render() {
 
     let player_info = player_data.players
-
+		console.log(player_info[0].player.id);
     let player_list = player_info.map(el => {
       return <option key={el.player.id}>{el.player.name.last}</option>
     })
 
+    //const playerImage = `public/assets/p${playerData.player.id}.png`;
+    //const player_image = `src/assets/p2064.png`;
 
 
     return (
@@ -35,14 +35,14 @@ class Player extends Component {
       <div className="block">
 
         <div className="drop-down">
-          <select onChange={this.handle_change} value={this.state.value}>
-            <option key={0}>-- Choose player ---</option>
+          <select className="select-class" onChange={this.handle_change}>
+            <option>--- Choose player ---</option>
             {player_list}
           </select>
         </div>
 
         <div className="top-box">
-          <img className="image" src={no_player} />
+          <img className="image" alt={no_player} src={spurs} />
         </div>
 
         <div className="bottom-box">
