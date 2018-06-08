@@ -1,0 +1,25 @@
+.block {
+	background-color: lightgray;
+	border: 2px solid gray;
+	padding: 25px;
+}
+
+.drop-down {
+	background-color: gray;
+	margin-bottom: 10px;
+}
+
+.top-box {
+	background-color: gray;
+	margin-bottom: 10px;
+}
+
+.image {
+	height: 20rem;
+	width: 20rem;
+}
+
+.bottom-box {
+	background-color: gray;
+	margin-bottom: 10px;
+}
